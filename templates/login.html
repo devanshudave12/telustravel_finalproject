@@ -1,3 +1,6 @@
+{% load static %}
+{% static "images" as baseUrl %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +10,7 @@
     <title>Register</title>
 </head>
 <body>
+    <h1>  Please Login Here </h1>
     <form action = "login" method = "POST">
         {% csrf_token %}
         <input type = "text" name = "username" placeholder="username"><br>
@@ -20,5 +24,9 @@
         <h3> {{message}} </h3>
         {% endfor %}
     </div>
+    <h2> Thanks for visiting my website </h2>
+    <h3> See you again </h3>
+     <img src="{% static 'images/login.jpg' %}" alt="HTML5 Icon" width="328" height="128">
+
 </body>
 </html>
